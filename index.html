@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUFA - Tienda Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: #ffffff;
+      color: #000;
+    }
+    .topbar {
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+    }
+    .topbar img {
+      height: 50px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    .topbar nav {
+      display: flex;
+      gap: 20px;
+    }
+    .topbar nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: #f5f5f5;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #000;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+    }
+    .product img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+    .product p {
+      color: green;
+      font-weight: bold;
+    }
+    .product button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .social a img {
+      width: 32px;
+      height: 32px;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .topbar {
+        flex-wrap: wrap;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .topbar nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #000;
+        margin-top: 10px;
+      }
+      .topbar nav.show {
+        display: flex;
+      }
+    }
+    #filtro {
+      padding: 8px 12px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      background: #f9f9f9 url('https://cdn-icons-png.flaticon.com/512/149/149125.png') no-repeat right 10px center;
+      background-size: 18px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      color: #333;
+      font-weight: 500;
+    }
+    label[for='filtro'] {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <img src="LOGO-RUFA.png" alt="RUFA Logo">
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</button>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Sobre Nosotros</a>
+      <a href="#redes">Redes Sociales</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h1>Bienvenidos a RUFA</h1>
+    <p>Diseño y fabricación de bolsos y morrales con estilo colombiano</p>
+  </section>
+
+  
+
+  <section class="section" id="productos">
+    <h2>Productos</h2>
+    <div class="section">
+  <h2>Morrales</h2>
+  <div class="products">
+    <div class="product"><img src="morral_supra.jpg" alt="Morral Supra"><h3>Morral Supra</h3><p>$70.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Supra'">Comprar</button></div>
+    <div class="product"><img src="morral_delta.jpg" alt="Morral Delta"><h3>Morral Delta</h3><p>$70.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Delta'">Comprar</button></div>
+    <div class="product"><img src="morral_alfa.jpg" alt="Morral Alfa"><h3>Morral Alfa</h3><p>$65.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Alfa'">Comprar</button></div>
+    <div class="product"><img src="morral_atomo.jpg" alt="Morral Átomo"><h3>Morral Átomo</h3><p>$55.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Átomo'">Comprar</button></div>
+    <div class="product"><img src="morral_origen.jpg" alt="Morral Origen"><h3>Morral Origen</h3><p>$55.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Origen'">Comprar</button></div>
+    <div class="product"><img src="morral_samy.jpg" alt="Morral Samy"><h3>Morral Samy</h3><p>$60.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Samy'">Comprar</button></div>
+    <div class="product"><img src="morral_arcoiris.jpg" alt="Morral Arcoiris"><h3>Morral Arcoiris</h3><p>$65.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Arcoiris'">Comprar</button></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Viajeros</h2>
+  <div class="products">
+    <div class="product"><img src="morral_alpinista.jpg" alt="Morral Alpinista"><h3>Morral Alpinista</h3><p>$80.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Alpinista'">Comprar</button></div>
+    <div class="product"><img src="morral_expedicion.jpg" alt="Morral Expedicion"><h3>Morral Expedición</h3><p>$90.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Expedición'">Comprar</button></div>
+    <div class="product"><img src="morral_montana.jpg" alt="Morral Montaña"><h3>Morral Montaña</h3><p>$85.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar el Morral Montaña'">Comprar</button></div>
+    <div class="product"><img src="maleta_indigo.jpg" alt="Maleta Indigo"><h3>Maleta Indigo</h3><p>$70.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar la Maleta Indigo'">Comprar</button></div>
+    <div class="product"><img src="maleta_beta.jpg" alt="Maleta Beta"><h3>Maleta Beta</h3><p>$65.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar la Maleta Beta'">Comprar</button></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Tulas</h2>
+  <div class="products">
+    <div class="product"><img src="tula_canada.jpg" alt="Tula Canada"><h3>Tula Canada</h3><p>$65.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar la Tula Canada'">Comprar</button></div>
+    <div class="product"><img src="tula_sport.jpg" alt="Tula Sport"><h3>Tula Sport</h3><p>$30.000</p><button onclick="location.href='https://wa.me/573001112233?text=Hola, quiero comprar la Tula Sport'">Comprar</button></div>
+  </div>
+</div>
+
+
+  <section class="section" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos RUFA, una fábrica nacional dedicada a la creación de bolsos y morrales modernos, funcionales y con estilo propio. Diseñamos para quienes valoran la calidad, el diseño y la producción local.</p>
+  </section>
+
+
+    <h2>Síguenos</h2>
+  <div class="social" id="redes">
+    <a href="https://facebook.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/573001112233" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+    <a href="https://tiktok.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+    </a>
+  </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 RUFA. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
